@@ -23,6 +23,7 @@ sftp.ssh.keyfile.2=rsa
 sftp.ssh.passphrase.2=
 
 #File
+file.name.prefix=Recon_
 file.name.dateformat=yyyyMMdd
 file.share.path=payhshare/Finacle/ONS_LOGS/TMB_LOGS/
 
@@ -56,9 +57,9 @@ mail.sender=
 mail.to=
 mail.cc=
 mail.bcc=
-
-mail.subject=[FILE REC] - as of #DD-MM-YYYY from PAYMENTHUB
-mail.message.text=Test Sending
+mail.dateformat=dd-MM-yyyy
+mail.subject=[FILE REC] - as of #dd-MM-yyyy from PAYMENTHUB
+mail.message.html.file=body_message.html
 ```
 
 Usage command
