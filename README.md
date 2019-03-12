@@ -4,25 +4,17 @@ JobRec
 Configuration
 ---------------
 ```sh
-#SFTP server 1
-sftp.host.1=192.168.99.100
-sftp.port.1=2222
-sftp.user.1=foo
-sftp.download.path.1=/app/staging/in/cib/FILEBKUP/
-sftp.upload.path.1=/pmhftp/PMH/Report/
-sftp.ssh.keyfile.1=nopp
-sftp.ssh.passphrase.1=
+#SFTP server
+sftp.host=192.168.99.100
+sftp.port=2222
+sftp.user=foo
 
-#SFTP server 2
-sftp.host.2=192.168.99.101
-sftp.port.2=2222
-sftp.user.2=appuser
-sftp.download.path.2=/app/staging/in/cib/FILEBKUP/
-sftp.upload.path.2=/pmhftp/PMH/Report/
-sftp.ssh.keyfile.2=rsa
-sftp.ssh.passphrase.2=
+sftp.upload.path=/pmhftp/PMH/Report/
+sftp.ssh.keyfile=nopp
+sftp.ssh.passphrase=
 
 #File
+file.backup.path=/app/staging/in/cib/FILEBKUP/
 file.name.prefix=Recon_
 file.name.dateformat=yyyyMMdd
 file.share.path=payhshare/Finacle/ONS_LOGS/TMB_LOGS/
@@ -30,7 +22,6 @@ file.share.path=payhshare/Finacle/ONS_LOGS/TMB_LOGS/
 #Log4j
 log.config.file=log4j.properties
 
-#Database
 #Database
 db.oracle.url=jdbc:oracle:thin:@192.168.99.102:1521:xe
 db.oracle.user=C##testsc
@@ -67,8 +58,10 @@ Usage command
 ```sh
 java -Dconfig.file=${config.properties} -jar ${PaymentHub.jar} ${mode}
 ```
-  Use -Dconfig.file=${config.properties} to get your config
-	
-  Use -jar ${CFR.jar} to get your jarfile to run
+  Usage command
+  	java -Dconfig.file=${config.properties} -jar ${JobRec.jar} ${part}
+  	Use -Dconfig.file=${config.properties} to get your config
+  	Use -jar ${JobRec.jar} to get your jarfile to run
+  	Use ${part} to get part of program (get|compare)
 
 
