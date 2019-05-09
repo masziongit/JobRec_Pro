@@ -64,10 +64,6 @@ mail.message.html.file=body_message.html
 
 Usage command
 ---------------
-
-```sh
-java -Dconfig.file=${config.properties} -jar ${PaymentHub.jar} ${mode}
-=======
 Encrypt password
 ```sh
 java -cp JobRec.jar main.AESCrypt ${password}
