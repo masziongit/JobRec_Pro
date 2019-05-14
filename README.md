@@ -22,6 +22,9 @@ file.backup.path=t1/app/staging/in/cib/FILEBKUP/
 file.name.prefix=Recon_
 file.name.dateformat=yyyyMMdd
 file.share.path=payhshare/Finacle/ONS_LOGS/TMB_LOGS/
+file.db.missing=DB_Missing
+file.db.error=DB_Error
+file.not.found=File_not_found
 
 #Log4j
 log.config.file=log4j.properties
